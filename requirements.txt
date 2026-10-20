@@ -1,0 +1,12 @@
+# Python >=3.8
+prompt_toolkit==3.0.43
+psutil==5.9.7
+watchdog==3.0.0
+rich==13.7.0
+google-genai
+python-dotenv==1.0.0
+# Optional UI / visualization
+textual==0.47.1
+# Remove heavy HF packages if not using them:
+# transformers, torch, huggingface_hub  (omit to avoid downloading large models)
+

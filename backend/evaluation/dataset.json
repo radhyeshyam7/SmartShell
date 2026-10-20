@@ -1,0 +1,72 @@
+[
+  {
+    "id": "tc-01",
+    "prompt": "list all files in current directory",
+    "expected_intent": "command",
+    "expected_entities": {"file_operation": "list", "target": "current_directory"},
+    "expected_risk": "low"
+  },
+  {
+    "id": "tc-02",
+    "prompt": "search for aura ai pdf",
+    "expected_intent": "clarification_needed",
+    "expected_entities": {"file_type": "pdf", "search_keyword": "aura ai"},
+    "expected_risk": "low"
+  },
+  {
+    "id": "tc-03",
+    "prompt": "find python files larger than 10 mb in Downloads",
+    "expected_intent": "command",
+    "expected_entities": {"file_type": "python", "minimum_size": "10 MB", "search_directory": "Downloads"},
+    "expected_risk": "low"
+  },
+  {
+    "id": "tc-04",
+    "prompt": "move them to Documents",
+    "expected_intent": "follow_up",
+    "expected_entities": {"target_reference": "them", "destination": "Documents"},
+    "expected_risk": "medium"
+  },
+  {
+    "id": "tc-05",
+    "prompt": "install numpy and pandas",
+    "expected_intent": "install",
+    "expected_entities": {"packages": ["numpy", "pandas"], "venv": "venv"},
+    "expected_risk": "medium"
+  },
+  {
+    "id": "tc-06",
+    "prompt": "remove-item -recurse -force C:\\Windows",
+    "expected_intent": "command",
+    "expected_entities": {"target_path": "C:\\Windows", "is_destructive": true},
+    "expected_risk": "critical"
+  },
+  {
+    "id": "tc-07",
+    "prompt": "show top 5 memory consuming processes",
+    "expected_intent": "command",
+    "expected_entities": {"resource": "memory", "top_count": 5},
+    "expected_risk": "low"
+  },
+  {
+    "id": "tc-08",
+    "prompt": "kill process 8940",
+    "expected_intent": "command",
+    "expected_entities": {"pid": 8940, "action": "kill"},
+    "expected_risk": "high"
+  },
+  {
+    "id": "tc-09",
+    "prompt": "delete temp.log",
+    "expected_intent": "command",
+    "expected_entities": {"filename": "temp.log", "action": "delete"},
+    "expected_risk": "high"
+  },
+  {
+    "id": "tc-10",
+    "prompt": "simulate round robin cpu scheduling",
+    "expected_intent": "command",
+    "expected_entities": {"algorithm": "Round Robin", "type": "simulator"},
+    "expected_risk": "low"
+  }
+]
